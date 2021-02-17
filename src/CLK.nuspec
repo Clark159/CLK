@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CLK</id>
+    <version>0.0.0</version>
+    <title>CLK</title>
+    <authors>Clark</authors>
+    <owners>Clark</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CLK</description>
+    <copyright>Copyright © 2014 CLK Software Studio</copyright>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+
+    <!-- CLK.dll -->
+    <file src="CLK\bin\Release\CLK.dll" target="lib\net" />
+    <file src="CLK\bin\Release\CLK.dll" target="lib\netcore" />
+    <file src="CLK\bin\Release\CLK.dll" target="lib\wpa" />
+    <file src="CLK\bin\Release\CLK.dll" target="lib\wp" />
+    <file src="CLK\bin\Release\CLK.dll" target="lib\MonoAndroid" />
+    <file src="CLK\bin\Release\CLK.dll" target="lib\MonoTouch" />
+    <file src="CLK\bin\Release\CLK.dll" target="lib\portable-net+netcore+wpa+wp+MonoAndroid+MonoTouch" />
+
+    <!-- CLK.Windows.dll -->
+    <file src="CLK.Windows\bin\Release\CLK.Windows.dll" target="lib\net" />
+
+    <!-- CLK.Android.dll -->
+    <file src="CLK.Android\bin\Release\CLK.Android.dll" target="lib\MonoAndroid" />
+
+  </files>
+</package>

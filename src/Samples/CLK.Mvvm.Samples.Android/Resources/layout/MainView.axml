@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/Button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Object Binding 01 : ViewModel --&gt; View" />
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Object Binding 02 : ViewModel &lt;-- View" />
+    <Button
+        android:id="@+id/Button3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Object Binding 03 : ViewModel &lt;-&gt; View" />
+</LinearLayout>

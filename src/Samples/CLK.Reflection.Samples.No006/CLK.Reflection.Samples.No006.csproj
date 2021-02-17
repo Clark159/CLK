@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C2CF9BC-A694-4C28-9DF5-077584F5F382}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{A06D6C12-3601-45B4-AD32-56B81B5F8B7A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CLK</RootNamespace>
-    <AssemblyName>CLK.Windows</AssemblyName>
+    <RootNamespace>CLK.Reflection.Samples.No006</RootNamespace>
+    <AssemblyName>CLK.Reflection.Samples.No006</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,23 +21,19 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,36 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\FreeAttributeConfigurationElement.cs" />
-    <Compile Include="Configuration\FreeAttributeConfigurationElementCollection.cs" />
-    <Compile Include="Configuration\FreeAttributeDictionary.cs" />
-    <Compile Include="Configuration\FreeAttributeProvider.cs" />
-    <Compile Include="Data\SqlClient\SqlCommandExtensions.cs" />
-    <Compile Include="Data\SqlClient\SqlCommandScope.cs" />
-    <Compile Include="Data\SqlClient\SqlConnectionScope.cs" />
-    <Compile Include="Data\SqlClient\SqlTransactionScope.cs" />
-    <Compile Include="IO\FileSystemWatcher.cs" />
+    <Compile Include="Program.cs">
+      <SubType>
+      </SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reflection\ConfigReflectContext.cs" />
-    <Compile Include="Reflection\ConfigReflectRepository.cs" />
-    <Compile Include="Reflection\ReflectConfigurationElement.cs" />
-    <Compile Include="Reflection\ReflectConfigurationElementCollection.cs" />
-    <Compile Include="Reflection\ReflectConfigurationSection.cs" />
-    <Compile Include="Settings\ConfigAppSettingRepository.cs" />
-    <Compile Include="Settings\ConfigConnectionStringRepository.cs" />
-    <Compile Include="Settings\ConfigSettingContext.cs" />
-    <Compile Include="Transactions\DistributedUnitOfWorkScope.cs" />
-    <Compile Include="Transactions\DistributedUnitOfWorkScopeProvider.cs" />
-    <Compile Include="Transactions\SqlClient\SqlUnitOfWorkScope.cs" />
-    <Compile Include="Transactions\SqlClient\SqlUnitOfWorkScopeProvider.cs" />
+    <Compile Include="TopEntity.cs" />
+    <Compile Include="SubEntity.cs" />
+    <Compile Include="TopEntityBuilder.cs" />
+    <Compile Include="SubEntityBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CLK\CLK.csproj">
-      <Project>{55a100b9-e43e-4e90-a2d8-2b5e5ef31490}</Project>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CLK.Windows\CLK.Windows.csproj">
+      <Project>{0C2CF9BC-A694-4C28-9DF5-077584F5F382}</Project>
+      <Name>CLK.Windows</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CLK\CLK.csproj">
+      <Project>{55A100B9-E43E-4E90-A2D8-2B5E5EF31490}</Project>
       <Name>CLK</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
